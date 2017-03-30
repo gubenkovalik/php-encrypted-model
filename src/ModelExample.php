@@ -1,15 +1,17 @@
 <?php
+
 namespace jencat\encryptedmodel\src;
+
 interface EncryptedModelInterface
 {
 	
-	public function getEncryptedFields() : array;
+	function getEncryptedFields() : array;
 	
-	public function encrypt(string $data) : string;
+	function encrypt(string $data) : string;
 	
-	public function decrypt(string $data) : string;
+	function decrypt(string $data) : string;
 	
-	private function getKey() : string;
+	function getKey() : string;
 }
 
 abstract class CoreModel 
@@ -20,12 +22,12 @@ abstract class CoreModel
 	public function update($column, $value){}
 	public function delete($id){}
 	
-	abstract public function getTableName() : string;
+	abstract function getTableName() : string;
 }
 
 abstract class EncryptedModel extends CoreModel implements EncryptedModelInterface
 {
-	private static final $KEY = 'jd165c7cb189oauc6ac';
+	private static $KEY = 'jd165c7cb189oauc6ac';
 	
 	public function encrypt($data) : string
 	{
