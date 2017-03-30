@@ -1,5 +1,5 @@
 <?php
-
+namespace jencat\encryptedmodel\src;
 interface EncryptedModelInterface
 {
 	

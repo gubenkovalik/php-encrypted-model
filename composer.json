@@ -1,0 +1,18 @@
+{
+    "name": "gubenkovalik/php-encrypted-model",
+    "description": "Encryption model",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valik Gubenko",
+            "email": "gubenkovalik@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "psr-4": {"jencat\\encryptedmodel\\src": "src", "jencat\\encryptedmodel\\test": "test"}
+}
